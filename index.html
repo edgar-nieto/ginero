@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html manifest="manifest.php">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="theme-color" content="#9c27b0">
+    <title>Ginero</title>
+    <link rel="stylesheet" href="css/framework7.material.css">
+    <link rel="stylesheet" href="css/framework7.material.colors.css">
+    <!--<link href="http://fonts.googleapis.com/css?family=Roboto:400,300,500,700" rel="stylesheet" type="text/css"> -->
+    <link rel="stylesheet" href="css/ginero.css">
+    <link rel="icon" href="img/icon.png">
+  </head>
+  <body onload="loadgiross();">
+    <!-- Main views-->
+    <div class="views" >
+      <div class="view view-main navbar-fixed">
+        <div class="pages">
+          <div class="page" data-page="inicio" ><a href="#" class="open-popup link floating-button color-blue"><i class="icon icon-plus"></i></a>
+            <div class="navbar theme-purple">
+              <div class="navbar-inner">
+                <div class="center content-title">Ginero</div>
+              </div>
+            </div>
+            <div class="fake-navbar bg-purple"></div>
+            <div class="page-content">
+              <div class="list-block places-list">
+                  <div class="item-inner">
+                    <div class="item-title">Presiona "+" para Nuevo Giro</div>
+                  </div>
+                <ul id="giros-done0">
+                </ul>
+                <ul id="giros-done1">
+                </ul>
+                <ul id="giros-done2">
+                </ul>
+                <ul id="giros-done3">
+                </ul>
+                <ul id="giros-done4">
+                </ul>
+                <ul id="giros-done5">
+                </ul>
+                <ul id="giros-done6">
+                </ul>
+                <ul id="giros-done7">
+                </ul>
+                <ul id="giros-done8">
+                </ul>
+                <ul id="giros-done9">
+                </ul>
+                <ul id="giros-done10">
+                </ul>
+                <ul id="giros-done11">
+                </ul>
+                <ul id="giros-done12">
+                </ul>
+                <ul id="giros-done13">
+                </ul>
+                <ul id="giros-done14">
+                </ul>
+                <ul id="giros-done15">
+                </ul>
+                <ul id="giros-done16">
+                </ul>
+                <ul id="giros-done17">
+                </ul>
+                <ul id="giros-done18">
+                </ul>
+                <ul id="giros-done19">
+                </ul>
+                <ul id="giros-done20">
+                </ul>
+                <ul id="giros-done21">
+                </ul>
+                <ul id="giros-done22">
+                </ul>
+                <ul id="giros-done23">
+                </ul>
+                <ul id="giros-done24">
+                </ul>
+                <ul id="giros-done25">
+                </ul>
+                <ul id="giros-done26">
+                </ul>
+                <ul id="giros-done27">
+                </ul>
+                <ul id="giros-done28">
+                </ul>
+                <ul id="giros-done29">
+                </ul>
+                <ul id="giros-done30">
+                </ul>
+                <ul id="giros-done31">
+                </ul>
+                <ul id="giros-done32">
+                </ul>
+                <ul id="giros-done33">
+                </ul>
+                <ul id="giros-done34">
+                </ul>
+                <ul id="giros-done35">
+                </ul>
+                <ul id="giros-done36">
+                </ul>
+                <ul id="giros-done37">
+                </ul>
+                <ul id="giros-done38">
+                </ul>
+                <ul id="giros-done39">
+                </ul>
+                <ul id="giros-done40">
+                </ul>
+                <div class="list-block-label"><img src="img/logo.png" width="100" height="100"></div>
+                </div>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- window popup-->
+    <div class="popup">
+      <div class="views">
+        <div class="pages">
+          <div class="page navbar-fixed theme-purple">
+            <div class="navbar">
+              <div class="navbar-inner">
+                  <div class="left"><a href="#" class="link icon-only close-popup"><i class="icon icon-back"></i></a></div>
+                  <div class="right">Nuevo Giro</div>
+              </div>
+            </div>
+            <div  class="page-content">
+            <div class="content-block-title">Datos</div>
+            <form id="gineroform1" class="list-block">
+              <div class="list-block inputs-list">
+               <ul>
+                  <li>
+                    <div class="item-content">
+                      <div class="item-media"><i class="icon icon-form-name"></i></div>
+                      <div class="item-inner">
+                        <div class="item-title floating-label">Giro para</div>
+                        <div class="item-input">
+                          <input type="text" name="n_giro" id="n_giro" value="" placeholder=""/ >
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="item-content">
+                      <div class="item-media"><i class="icon icon-form-tel"></i></div>
+                      <div class="item-inner">
+                        <div class="item-title floating-label">Telefono</div>
+                        <div class="item-input">
+                          <input type="tel" name="tele" id="tele" value="" placeholder=""/>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="item-content">
+                      <div class="item-media"><i class="icon icon-form-comment"></i></div>
+                      <div class="item-inner">
+                        <div class="item-title floating-label">Monto Bs</div>
+                        <div class="item-input">
+                          <input type="tel" name="mon_bs" id="mon_bs" placeholder="" onkeyup="calcular();"/>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+
+                  <li>
+                    <div class="item-content">
+                      <div class="item-media"><i class="icon icon-form-comment"></i></div>
+                      <div class="item-inner">
+                        <div class="item-title floating-label">Gramas</div>
+                        <div class="item-input">
+                          <input type="tel"  name="gramas" id="gramas" placeholder="" onkeyup="calcular();"/>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="item-content">
+                      <div class="item-media"><i class="icon icon-form-toggle"></i></div>
+                      <div class="item-inner">
+                        <div class="item-input">
+                          <input type="text" placeholder="Valor G" readonly="readonly" name="picker-device" id="picker-device" onchange="calcular();"/>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="item-content">
+                      <div class="item-media"><i class="icon icon-form-url"></i></div>
+                      <div class="item-inner">
+                        <div class="item-title label">Total Giro</div>
+                        <div class="item-input">
+                          <input type="text" name="tgiro" value=""  id="tgiro" placeholder="A Transferir: %: "/>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </form>
+                <div class="content-block">
+                <p class="buttons-row">
+                  <a href="#" class="button button-raised button-fill color-indigo form-to-json close-popup">Guardar</a>
+                  <a href="#" class="button button-raised button-fill color-indigo" onclick="reiniciarf();">Borrar</a></p>
+              </div>
+          </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+    <!-- Templates-->
+
+    <!-- Path to Framework7 Library JS-->
+    <script type="text/javascript" src="js/framework7.js"></script>
+    <!-- Path to your app js-->
+    <script type="text/javascript" src="js/ginero.js"></script>
+  </body>
+</html>
